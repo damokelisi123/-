@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#div1{
+		width: 200px;
+		height: 30px;
+		background-color: red;
+	}
+	#div2{
+		width: 150px;
+		height: 20px;
+		background-color: yellow;
+		margin: 10px;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<script>
+	window.onload=function () {
+		var odiv1=document.getElementById('div1');
+		var odiv2=document.getElementById('div2');
+		var timer=null;
+		odiv1.onmouseover=function () {
+			odiv2.style.display="block";
+			clearTimeout(timer);
+		}
+		odiv1.onmouseout=function () {
+			timer=setTimeout(function () {
+				odiv2.style.display="none";
+			},300)	
+		}
+		odiv2.onmouseover=function(){
+			clearTimeout(timer);
+		}
+		odiv2.onmouseout=function(){
+			timer=setTimeout(function () {
+				odiv2.style.display="none";
+			},300)	
+		}
+	}
+	</script>
+</body>
+</html>

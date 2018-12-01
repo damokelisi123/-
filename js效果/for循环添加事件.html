@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="123">
+	<input type="button" value="456">
+	<input type="button" value="789">
+	<input type="button" value="159">
+	<input type="button" value="147">
+<script>
+	var oinput=document.getElementsByTagName('input');
+		for(i=0;i<oinput.length;i++){
+			oinput[i].onclick=function () {
+				alert(this.value);
+		}
+	}
+</script>
+</body>
+</html>

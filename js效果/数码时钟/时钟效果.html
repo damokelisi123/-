@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	.container{
+		color: #000099;
+		background-color: #fff;
+		font-size: 100px;
+		line-height: 100px;
+		margin: auto;
+		font-weight: bold;
+		font-family:"Microsoft YaHei","MicrosoftJhengHei",'STHeiti Light','STHeiti','MingLiu';
+	}
+	img{
+		width: 100px;
+		height: 100px;
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	年
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	月
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	日<br>
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	点
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	分
+	<img src="img/0.jpg" alt="">
+	<img src="img/0.jpg" alt="">
+	秒 星期<img src="img/0.jpg" alt="">
+</div>
+
+<script>
+function toDouble(num) {
+	if(num<10){
+		return "0"+num;
+	}else{
+		return ""+num;
+	}
+}
+window.onload=function(){
+	var obtn=document.getElementById('btn1');
+	var oimg=document.getElementsByTagName('img');
+	var i=0;
+	function update() {
+		var odate=new Date();
+		var str=toDouble(odate.getFullYear())+toDouble(odate.getMonth()+1)+toDouble(odate.getDate())+toDouble(odate.getHours())+toDouble(odate.getMinutes())+toDouble(odate.getSeconds())+odate.getDay();
+		for (var i=0; i<oimg.length; i++) {
+			oimg[i].src='img/'+str.charAt(i)+'.jpg';
+		}
+	}
+	setInterval(update,1000);
+	update();
+}
+// window.onload=function () {
+// 	var date=new Date();
+// 	var str=date.getHours()+"点"+date.getMinutes()+"分"+date.getSeconds()+"秒";
+// 	alert(str);
+// }
+</script>
+</body>
+</html>

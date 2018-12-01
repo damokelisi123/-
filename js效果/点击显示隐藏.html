@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p{
+			width: 100px;
+			margin: 0 auto;	
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			width: 100px;
+			margin: 0 auto;
+			background-color: yellowgreen;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p id="btn">点击显示隐藏</p>
+		<ul id="ul" style="display: block;">
+			<li>123</li>
+			<li>147</li>
+			<li>159</li>
+		</ul>
+	</div>
+	<script>
+	window.onload=function () {
+		var btn=document.getElementById('btn');
+		var ul1=document.getElementById('ul');
+		btn.onclick=function () {
+			if(ul1.style.display=="block"){
+				ul1.style.display="none";
+			}else{
+				ul1.style.display="block";
+			}
+		}
+	}
+	</script>
+</body>
+</html>

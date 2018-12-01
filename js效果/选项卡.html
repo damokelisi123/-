@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#tab{
+			margin: auto;
+			width: 400px;
+			margin: auto;
+		}
+		#nav{
+			
+		}
+		ul{
+			list-style: none;
+		}
+		ul:after{
+			display: table;
+			clear:both;
+			content: "";
+		}
+		li{
+			float: left;
+			width: 100px;
+			height: 20px;
+			border:1px solid #000;
+		}
+		a{
+			display: block;
+			text-align: center;
+			margin: auto;
+			text-decoration: none;
+		}
+		.active{
+			color:#000;
+			background-color: yellow;
+		}
+		.box{
+			display: none;
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<section id="tab">
+		<ul>
+			<li class="active"><a href="#">123</a></li>
+			<li><a href="#">456</a></li>
+			<li><a href="#">789</a></li>
+		</ul>
+		<div class="box" style="display: block;">eftgaf</div>
+		<div class="box">fasdfs</div>
+		<div class="box">rhyetuyh</div>
+	</section>
+	<script>
+	window.onload=function () {
+		var obtn=document.getElementsByTagName('li');
+		var odiv=document.getElementsByTagName('div');
+		var i=0;
+		for(i=0;i<obtn.length;i++){
+			obtn[i].index=i;
+			obtn[i].onclick=function () {
+				for(i=0;i<obtn.length;i++){
+					obtn[i].className="";
+					odiv[i].style.display="none";
+				}
+				odiv[this.index].style.display="block";
+				this.className="active";
+			}
+		}
+	}
+	</script>
+	<!-- 选项卡原理 -->
+	<!--  点击按钮时改变class和style.display-->
+	<!--  选项卡头部标签-->
+		<!-- 让所有按钮的className都为空 -->
+		<!-- 让当前按钮的className为active -->
+	<!-- 选项卡内容 -->
+		<!-- 让所有div的display都为none -->
+		<!-- 让当前div的display为block -->
+</body>
+</html>

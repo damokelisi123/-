@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.roll{
+	width: 1000px;
+	position: relative;
+	margin: auto;
+	height: 200px;
+}
+.btn_left,
+.btn_right{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: absolute;
+}
+.btn_left{
+	left: 0;
+	top: 70px;
+}
+.btn_right{
+	top: 70px;
+	left: 950px
+}
+.btn_left img,
+.btn_right img{
+	width: 100%;
+}
+.warp{
+	margin: auto;
+	height: 150px;
+	overflow: hidden;
+}
+.warp ul{
+	width: 880px;
+	margin: 50px auto 0 auto;
+	list-style: none;
+}
+.warp ul::after{
+	clear: both;
+	display: table;
+	content: "";
+}
+.warp ul li{
+	width: 200px;
+	height: 100px;
+	overflow: hidden;
+	float: left;
+	margin:0 10px;
+}
+.warp ul li img{
+	width: 100%;
+}

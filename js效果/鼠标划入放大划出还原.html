@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+	window.onload=function() {
+		var div1=document.getElementById("div1");
+		div1.onmouseout=green;
+		var div1=document.getElementById("div1");
+		div1.onmouseover=red;
+	}
+			function green() {
+				var div1=document.getElementById("div1");
+				div1.style.width='100px';
+				div1.style.height= '100px';
+				div1.style.background='green';
+			}
+			function red() {
+				var div1=document.getElementById("div1");
+				div1.style.width='200px';
+				div1.style.height= '200px';
+				div1.style.background='red';
+			}
+	</script>
+</body>
+</html>
