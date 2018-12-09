@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>conponent-2 props属性设置</title>
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+    <h2>conponent-2 props属性设置</h2><hr>
+    <div id="add">
+        <panda v-bind:here="message"></panda>
+    </div>
+    <script>
+        var add=new Vue({
+            el:'#add',
+            data:{
+                message:'China'
+            },
+            components:{
+                'panda':{
+                    template:`<div style="color:red">Panda is from {{ here }}</div>`,
+                    props:['here']
+                }
+            }
+        })
+        // vue中不能用“—”命名，例如:from-here, 只能用小驼峰命名法，例如：fromHere，首写字母小写，中间大写。
+    </script>
+</body>
+</html>

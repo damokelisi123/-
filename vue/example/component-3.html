@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>component-3 父子组件关系</title>
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+    <h2>component-3 父子组件关系</h2><hr>
+    <div id="add">
+        <panda></panda>
+    </div>
+    <script>
+         var city = {
+            template:`<div style="color:green;">sichuan of China </div>`
+        }
+        var pandaComponent = {
+            template:`
+            <div style="color:red;">
+                <p>Panda is from China! </p>
+                <city></city>
+            </div>
+            `,
+            components:{
+                "city":city
+            }
+        }
+       
+        var vue=new Vue({
+            el:'#add',
+            components:{
+                "panda":pandaComponent
+            }
+        })
+    </script>
+</body>
+</html>
